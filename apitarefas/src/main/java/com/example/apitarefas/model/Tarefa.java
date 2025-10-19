@@ -12,14 +12,14 @@ public class Tarefa {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 
-    @Column(name = "nome_tarefa", nullable = false)
-	private String nomeTarefa;
+    @Column(name = "nome", nullable = false)
+	private String nome;
 
     @Column(name = "data_entrega", nullable = false)
     private String dataEntrega;
 
-    @Column(name = "nome_responsavel", nullable = false)
-    private String nomeResponsavel;
+    @Column(name = "responsavel", nullable = false)
+    private String responsavel;
 	
 	public Long getId() {
 		return id;
@@ -27,11 +27,11 @@ public class Tarefa {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getNomeTarefa() {
-		return nomeTarefa;
+	public String getNome() {
+		return nome;
 	}
-	public void setNomeTarefa(String nomeTarefa) {
-		this.nomeTarefa = nomeTarefa;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
     public String getDataEntrega() {
@@ -42,21 +42,21 @@ public class Tarefa {
         this.dataEntrega = dataEntrega;
     }
 
-    public String getNomeResponsavel() {
-        return nomeResponsavel;
+    public String getResponsavel() {
+        return responsavel;
     }
 
-    public void setNomeResponsavel(String nomeResponsavel) {
-        this.nomeResponsavel = nomeResponsavel;
+    public void setResponsavel(String responsavel) {
+        this.responsavel = responsavel;
     }
 
 //    @Override TODO AJUSTAR MÉTODOS
 //	public String toString() {
-//		return "Tarefa [id=" + id + ", nomeTarefa=" + nomeTarefa + ", dataEntrega=" + dataEntrega + ", nomeResponsavel=" + nomeResponsavel + "]";
+//		return "Tarefa [id=" + id + ", nome=" + nome + ", dataEntrega=" + dataEntrega + ", responsavel=" + responsavel + "]";
 //	}
 //	@Override
 //	public int hashCode() {
-//		return Objects.hash(email, fone, id, nomeTarefa);
+//		return Objects.hash(email, fone, id, nome);
 //	}
 //	@Override
 //	public boolean equals(Object obj) {
@@ -68,6 +68,6 @@ public class Tarefa {
 //			return false;
 //		Tarefa other = (Tarefa) obj;
 //		return Objects.equals(email, other.email) && Objects.equals(fone, other.fone) && Objects.equals(id, other.id)
-//				&& Objects.equals(nomeTarefa, other.nomeTarefa);
+//				&& Objects.equals(nome, other.nome);
 //	}
 }
